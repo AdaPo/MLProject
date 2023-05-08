@@ -7,15 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D45DA6F29E5BC82009D921B /* BigMLConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45DA6E29E5BC82009D921B /* BigMLConnector.swift */; };
+		4D460A4629E43E0C00874DBF /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A4529E43E0C00874DBF /* BottomBarView.swift */; };
+		4D460A4A29E442D800874DBF /* ImageClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A4929E442D800874DBF /* ImageClassificationView.swift */; };
+		4D460A4F29E4448B00874DBF /* ImageClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A4E29E4448B00874DBF /* ImageClassificationViewModel.swift */; };
+		4D460A5429E445FB00874DBF /* SportsClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5329E445ED00874DBF /* SportsClassification.mlmodel */; };
+		4D460A5729E4463300874DBF /* ImageClassificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5629E4463300874DBF /* ImageClassificationController.swift */; };
+		4D460A5B29E44AEA00874DBF /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5A29E44AEA00874DBF /* ImagePredictor.swift */; };
+		4D460A5D29E4648F00874DBF /* IrisClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */; };
+		4D460A5F29E59D5700874DBF /* IrisClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5E29E59D5700874DBF /* IrisClassificationView.swift */; };
+		4D460A6129E59D7400874DBF /* IrisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A6029E59D7400874DBF /* IrisViewModel.swift */; };
+		4D460A6529E5AF8400874DBF /* IrisClassificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A6429E5AF8400874DBF /* IrisClassificationController.swift */; };
 		4D46424629CDCDFA00917FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46424529CDCDFA00917FAC /* AppDelegate.swift */; };
 		4D46424829CDCDFA00917FAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46424729CDCDFA00917FAC /* SceneDelegate.swift */; };
 		4D46424A29CDCDFA00917FAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46424929CDCDFA00917FAC /* ViewController.swift */; };
 		4D46424D29CDCDFA00917FAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D46424B29CDCDFA00917FAC /* Main.storyboard */; };
 		4D46424F29CDCDFB00917FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D46424E29CDCDFB00917FAC /* Assets.xcassets */; };
 		4D46425229CDCDFB00917FAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D46425029CDCDFB00917FAC /* LaunchScreen.storyboard */; };
+		4D8919272A0273030002858B /* IncomeClassificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919262A0273030002858B /* IncomeClassificationController.swift */; };
+		4D8919292A02731B0002858B /* IncomeClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919282A02731B0002858B /* IncomeClassificationView.swift */; };
+		4D89192B2A027F300002858B /* IncomeClassificationModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D89192A2A027F300002858B /* IncomeClassificationModel.mlmodel */; };
+		4D89192D2A0967430002858B /* BigMLConnectr+IrisExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89192C2A0967430002858B /* BigMLConnectr+IrisExtension.swift */; };
+		4D89192F2A09698D0002858B /* BigMLConnector+ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89192E2A09698D0002858B /* BigMLConnector+ImageExtension.swift */; };
+		4D8919312A096B630002858B /* BigMLConnector+IncomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D45DA6E29E5BC82009D921B /* BigMLConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigMLConnector.swift; sourceTree = "<group>"; };
+		4D460A4529E43E0C00874DBF /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		4D460A4929E442D800874DBF /* ImageClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationView.swift; sourceTree = "<group>"; };
+		4D460A4E29E4448B00874DBF /* ImageClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewModel.swift; sourceTree = "<group>"; };
+		4D460A5329E445ED00874DBF /* SportsClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SportsClassification.mlmodel; sourceTree = "<group>"; };
+		4D460A5629E4463300874DBF /* ImageClassificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationController.swift; sourceTree = "<group>"; };
+		4D460A5A29E44AEA00874DBF /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = IrisClassification.mlmodel; path = "../../../../Desktop/Škola/Magistr/Diplomka/ExporteModels/IrisClassification.mlmodel"; sourceTree = "<group>"; };
+		4D460A5E29E59D5700874DBF /* IrisClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisClassificationView.swift; sourceTree = "<group>"; };
+		4D460A6029E59D7400874DBF /* IrisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisViewModel.swift; sourceTree = "<group>"; };
+		4D460A6429E5AF8400874DBF /* IrisClassificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisClassificationController.swift; sourceTree = "<group>"; };
 		4D46424229CDCDFA00917FAC /* MachineLearningProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachineLearningProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D46424529CDCDFA00917FAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D46424729CDCDFA00917FAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +52,12 @@
 		4D46424E29CDCDFB00917FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D46425129CDCDFB00917FAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D46425329CDCDFB00917FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8919262A0273030002858B /* IncomeClassificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeClassificationController.swift; sourceTree = "<group>"; };
+		4D8919282A02731B0002858B /* IncomeClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeClassificationView.swift; sourceTree = "<group>"; };
+		4D89192A2A027F300002858B /* IncomeClassificationModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IncomeClassificationModel.mlmodel; sourceTree = "<group>"; };
+		4D89192C2A0967430002858B /* BigMLConnectr+IrisExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnectr+IrisExtension.swift"; sourceTree = "<group>"; };
+		4D89192E2A09698D0002858B /* BigMLConnector+ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnector+ImageExtension.swift"; sourceTree = "<group>"; };
+		4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnector+IncomeExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +71,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D45DA6D29E5BC6F009D921B /* Connectors */ = {
+			isa = PBXGroup;
+			children = (
+				4D45DA6E29E5BC82009D921B /* BigMLConnector.swift */,
+				4D89192C2A0967430002858B /* BigMLConnectr+IrisExtension.swift */,
+				4D89192E2A09698D0002858B /* BigMLConnector+ImageExtension.swift */,
+				4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */,
+			);
+			path = Connectors;
+			sourceTree = "<group>";
+		};
+		4D460A4729E43E1200874DBF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4D460A4529E43E0C00874DBF /* BottomBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4D460A4829E4429100874DBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D460A4929E442D800874DBF /* ImageClassificationView.swift */,
+				4D460A5E29E59D5700874DBF /* IrisClassificationView.swift */,
+				4D8919282A02731B0002858B /* IncomeClassificationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D460A4D29E4447900874DBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D460A4E29E4448B00874DBF /* ImageClassificationViewModel.swift */,
+				4D460A6029E59D7400874DBF /* IrisViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D460A5229E445E800874DBF /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				4D89192A2A027F300002858B /* IncomeClassificationModel.mlmodel */,
+				4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */,
+				4D460A5329E445ED00874DBF /* SportsClassification.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		4D460A5529E4461900874DBF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D460A5629E4463300874DBF /* ImageClassificationController.swift */,
+				4D460A6429E5AF8400874DBF /* IrisClassificationController.swift */,
+				4D8919262A0273030002858B /* IncomeClassificationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4D460A5829E44AD000874DBF /* Predictors */ = {
+			isa = PBXGroup;
+			children = (
+				4D460A5929E44ADC00874DBF /* ImagePredictor */,
+			);
+			path = Predictors;
+			sourceTree = "<group>";
+		};
+		4D460A5929E44ADC00874DBF /* ImagePredictor */ = {
+			isa = PBXGroup;
+			children = (
+				4D460A5A29E44AEA00874DBF /* ImagePredictor.swift */,
+			);
+			path = ImagePredictor;
+			sourceTree = "<group>";
+		};
 		4D46423929CDCDFA00917FAC = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +164,11 @@
 		4D46424429CDCDFA00917FAC /* MachineLearningProject */ = {
 			isa = PBXGroup;
 			children = (
+				4D45DA6D29E5BC6F009D921B /* Connectors */,
+				4D460A5829E44AD000874DBF /* Predictors */,
+				4D460A5529E4461900874DBF /* Controllers */,
+				4D460A4D29E4447900874DBF /* Models */,
+				4D460A4829E4429100874DBF /* Views */,
 				4D46424529CDCDFA00917FAC /* AppDelegate.swift */,
 				4D46424729CDCDFA00917FAC /* SceneDelegate.swift */,
 				4D46424929CDCDFA00917FAC /* ViewController.swift */,
@@ -63,6 +176,8 @@
 				4D46424E29CDCDFB00917FAC /* Assets.xcassets */,
 				4D46425029CDCDFB00917FAC /* LaunchScreen.storyboard */,
 				4D46425329CDCDFB00917FAC /* Info.plist */,
+				4D460A5229E445E800874DBF /* MLModels */,
+				4D460A4729E43E1200874DBF /* Components */,
 			);
 			path = MachineLearningProject;
 			sourceTree = "<group>";
@@ -138,9 +253,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D460A5F29E59D5700874DBF /* IrisClassificationView.swift in Sources */,
+				4D89192B2A027F300002858B /* IncomeClassificationModel.mlmodel in Sources */,
+				4D89192D2A0967430002858B /* BigMLConnectr+IrisExtension.swift in Sources */,
 				4D46424A29CDCDFA00917FAC /* ViewController.swift in Sources */,
+				4D8919312A096B630002858B /* BigMLConnector+IncomeExtension.swift in Sources */,
 				4D46424629CDCDFA00917FAC /* AppDelegate.swift in Sources */,
 				4D46424829CDCDFA00917FAC /* SceneDelegate.swift in Sources */,
+				4D460A5D29E4648F00874DBF /* IrisClassification.mlmodel in Sources */,
+				4D89192F2A09698D0002858B /* BigMLConnector+ImageExtension.swift in Sources */,
+				4D460A6129E59D7400874DBF /* IrisViewModel.swift in Sources */,
+				4D460A4629E43E0C00874DBF /* BottomBarView.swift in Sources */,
+				4D460A6529E5AF8400874DBF /* IrisClassificationController.swift in Sources */,
+				4D460A4F29E4448B00874DBF /* ImageClassificationViewModel.swift in Sources */,
+				4D460A5B29E44AEA00874DBF /* ImagePredictor.swift in Sources */,
+				4D8919272A0273030002858B /* IncomeClassificationController.swift in Sources */,
+				4D8919292A02731B0002858B /* IncomeClassificationView.swift in Sources */,
+				4D460A5429E445FB00874DBF /* SportsClassification.mlmodel in Sources */,
+				4D460A5729E4463300874DBF /* ImageClassificationController.swift in Sources */,
+				4D460A4A29E442D800874DBF /* ImageClassificationView.swift in Sources */,
+				4D45DA6F29E5BC82009D921B /* BigMLConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
