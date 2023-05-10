@@ -30,6 +30,8 @@
 		4D89192D2A0967430002858B /* BigMLConnectr+IrisExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89192C2A0967430002858B /* BigMLConnectr+IrisExtension.swift */; };
 		4D89192F2A09698D0002858B /* BigMLConnector+ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89192E2A09698D0002858B /* BigMLConnector+ImageExtension.swift */; };
 		4D8919312A096B630002858B /* BigMLConnector+IncomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */; };
+		4D8919332A0BECD70002858B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919322A0BECD70002858B /* Camera.swift */; };
+		4D8919352A0BED8B0002858B /* ImageClassificationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919342A0BED8B0002858B /* ImageClassificationController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		4D89192C2A0967430002858B /* BigMLConnectr+IrisExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnectr+IrisExtension.swift"; sourceTree = "<group>"; };
 		4D89192E2A09698D0002858B /* BigMLConnector+ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnector+ImageExtension.swift"; sourceTree = "<group>"; };
 		4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnector+IncomeExtension.swift"; sourceTree = "<group>"; };
+		4D8919322A0BECD70002858B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		4D8919342A0BED8B0002858B /* ImageClassificationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageClassificationController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				4D460A5629E4463300874DBF /* ImageClassificationController.swift */,
 				4D460A6429E5AF8400874DBF /* IrisClassificationController.swift */,
 				4D8919262A0273030002858B /* IncomeClassificationController.swift */,
+				4D8919322A0BECD70002858B /* Camera.swift */,
+				4D8919342A0BED8B0002858B /* ImageClassificationController+Ext.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,11 +264,13 @@
 				4D89192D2A0967430002858B /* BigMLConnectr+IrisExtension.swift in Sources */,
 				4D46424A29CDCDFA00917FAC /* ViewController.swift in Sources */,
 				4D8919312A096B630002858B /* BigMLConnector+IncomeExtension.swift in Sources */,
+				4D8919332A0BECD70002858B /* Camera.swift in Sources */,
 				4D46424629CDCDFA00917FAC /* AppDelegate.swift in Sources */,
 				4D46424829CDCDFA00917FAC /* SceneDelegate.swift in Sources */,
 				4D460A5D29E4648F00874DBF /* IrisClassification.mlmodel in Sources */,
 				4D89192F2A09698D0002858B /* BigMLConnector+ImageExtension.swift in Sources */,
 				4D460A6129E59D7400874DBF /* IrisViewModel.swift in Sources */,
+				4D8919352A0BED8B0002858B /* ImageClassificationController+Ext.swift in Sources */,
 				4D460A4629E43E0C00874DBF /* BottomBarView.swift in Sources */,
 				4D460A6529E5AF8400874DBF /* IrisClassificationController.swift in Sources */,
 				4D460A4F29E4448B00874DBF /* ImageClassificationViewModel.swift in Sources */,
@@ -422,6 +430,7 @@
 				DEVELOPMENT_TEAM = 66FZGBXJT7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MachineLearningProject/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to take a picture for classification";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -450,6 +459,7 @@
 				DEVELOPMENT_TEAM = 66FZGBXJT7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MachineLearningProject/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is needed to take a picture for classification";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

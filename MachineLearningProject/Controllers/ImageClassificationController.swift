@@ -25,7 +25,7 @@ class ImageClassificationController: UIViewController, UIImagePickerControllerDe
     }
     
     func createRootView() {
-        let root = ImageClassificationView(model: model, actionClassify: classifyImage, actionOpenGallery: openGallery)
+        let root = ImageClassificationView(model: model, actionClassify: classifyImage, actionOpenGallery: openGallery, actionOpenCamera: openCamera)
         
         embedInHostingViewController(rootView: root)
     }
@@ -38,6 +38,13 @@ class ImageClassificationController: UIViewController, UIImagePickerControllerDe
             
             present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    func openCamera() {
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

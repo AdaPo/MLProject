@@ -10,10 +10,10 @@ import CoreML
 
 struct IrisClassificationView: View {
 
-    @State private var sepalW: Double = 0.0
-    @State private var sepalL: Double = 0.0
-    @State private var petalW: Double = 0.0
-    @State private var petalL: Double = 0.0
+    @State var sepalW: Double = Double()
+    @State var sepalL: Double = Double()
+    @State var petalW: Double = Double()
+    @State var petalL: Double = Double()
 
     @State private var result: String = ""
     @State var modelSource: ModelSource = .coreMl
@@ -24,10 +24,39 @@ struct IrisClassificationView: View {
         ZStack {
             VStack(alignment: .center) {
                 Form {
-                    Stepper("Sepal width: \(sepalW.formatted())", value: $sepalW, in: 0...10, step: 0.1)
-                    Stepper("Sepal Length: \(sepalL.formatted())", value: $sepalL, in: 0...10, step: 0.1)
-                    Stepper("Petal width: \(petalW.formatted())", value: $petalW, in: 0...10, step: 0.1)
-                    Stepper("Petal Length: \(petalL.formatted())", value: $petalL, in: 0...10, step: 0.1)
+                    HStack() {
+                        Text("Sepal width")
+                        Spacer()
+                        TextField("", value: $sepalW, format: .number)
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 50)
+                        
+                    }
+                    HStack() {
+                        Text("Sepal length")
+                        Spacer()
+                        TextField("", value: $sepalL, format: .number)
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 50)
+                    }
+                    HStack() {
+                        Text("Petal width")
+                        Spacer()
+                        TextField("", value: $petalW, format: .number)
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 50)
+                    }
+                    HStack() {
+                        Text("Petal Length")
+                        Spacer()
+                        TextField("", value: $petalL, format: .number)
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 50)
+                    }
                     VStack {
                         Text("Selected the source of ML Model")
                         Picker("Select model source", selection: $modelSource) {

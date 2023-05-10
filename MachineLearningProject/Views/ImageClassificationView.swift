@@ -16,6 +16,8 @@ struct ImageClassificationView: View {
     @ObservedObject var model: ImageClassificationViewModel
     var actionClassify: ((UIImage)->Void)
     var actionOpenGallery: (()->Void)
+    var actionOpenCamera: (()->Void)
+    
     var body: some View {
         ZStack {
             VStack {
@@ -40,6 +42,15 @@ struct ImageClassificationView: View {
                         .pickerStyle(.segmented)
                     }
                     HStack {
+                        Button {
+                            actionOpenCamera()
+                        } label: {
+                            Text("Take a picture")
+                        }
+                        .foregroundColor(.white)
+                        .padding(15)
+                        .background(.gray)
+                        .cornerRadius(8)
                         Button {
                             actionOpenGallery()
                         } label: {
@@ -74,6 +85,6 @@ struct ImageClassificationView: View {
 
 struct ImageClassificationView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageClassificationView(model: ImageClassificationViewModel(), actionClassify: {_ in}, actionOpenGallery: {})
+        ImageClassificationView(model: ImageClassificationViewModel(), actionClassify: {_ in}, actionOpenGallery: {}, actionOpenCamera: {})
     }
 }
