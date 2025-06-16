@@ -12,6 +12,8 @@ class IrisClassificationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Config.shared.dataset = .iris
+
         createRootView()
     }
     

@@ -12,6 +12,8 @@ class IncomeClassificationController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Config.shared.dataset = .adult
+
         createRootView()
         // Do any additional setup after loading the view.
     }
@@ -25,24 +27,5 @@ class IncomeClassificationController: UIViewController {
     
     
     func classify() {
-//        print("coreML")
-//        do {
-//            let config = MLModelConfiguration()
-//            let model =  IncomeClassificationModel(configuration: config)
-////            let prediction = try model.prediction(
-////                sepalLenthg: sepalL,
-////                sepalWidth: sepalW,
-////                petalLength: petalL,
-////                petalWidth: petalW
-////            )
-////
-////            let result = prediction.Target
-////            self.result = result
-//            
-//            let prediction = try model.pred
-//        } catch {
-//            print("Error happened.")
-//        }
-
     }
 }

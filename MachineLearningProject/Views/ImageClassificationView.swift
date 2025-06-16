@@ -10,6 +10,7 @@ import SwiftUI
 enum ModelSource: String, Equatable, CaseIterable {
     case coreMl = "Core ML"
     case bigMl = "BigML"
+    case tensor = "TensorFlow Lite"
 }
 
 struct ImageClassificationView: View {

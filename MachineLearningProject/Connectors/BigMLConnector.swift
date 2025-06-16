@@ -11,6 +11,8 @@ import UIKit
 import FoundationNetworking
 #endif
 
+import TensorFlowLite
+
 enum BigMLConnectorError: Error {
     case noUrl
     case noImage

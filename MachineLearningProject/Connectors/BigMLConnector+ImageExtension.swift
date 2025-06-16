@@ -83,7 +83,7 @@ extension BigMLConnector {
          request.allHTTPHeaderFields = ["Content-Type": "application/json"]
          
          let body: [String: AnyHashable] = [
-             "deepnet": "deepnet/6431aa6d68671c1425f398aa",
+             "deepnet": "deepnet/684efee38baab6a917b8dfd2",
              "input_data": [
                  "000000": resourceId
              ]
@@ -91,6 +91,8 @@ extension BigMLConnector {
          request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
          
          var responseString = ""
+         
+//         let response = await URLSession.shared.data(for: re)
          let task = URLSession.shared.dataTask(with: request) { data, _, error in
              guard let data = data, error == nil else {
                  print("No data")
@@ -98,10 +100,10 @@ extension BigMLConnector {
              }
              
              do {
-                 let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                 let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
                  //                responseString = response as! String
-                 print(response)
-                 print(String(data: data, encoding: .utf8))
+                 let parsedResponse = self.parseResponse(response: response)
+                 print(parsedResponse)
              } catch {
                  print("no response")
              }
@@ -110,4 +112,46 @@ extension BigMLConnector {
          return responseString
      }
      
+    func parseResponse(response root: [String: Any]) -> String {
+
+        // Assume this is the JSON you get from the backend
+
+        do {
+            if let probabilities = root["probabilities"] as? [[Any]] {
+
+                // Convert into a dictionary: [Label: Confidence]
+                var predictions: [String: Double] = [:]
+
+                for entry in probabilities {
+                    if entry.count == 2,
+                       let label = entry[0] as? String,
+                       let confidence = entry[1] as? Double {
+                        predictions[label] = confidence
+                    }
+                }
+
+                // Optional: Sort by highest probability
+                let sortedPredictions = predictions.sorted { $0.value > $1.value }
+
+                // Print top prediction
+                if let top = sortedPredictions.first {
+                    print("Top prediction: \(top.key) with confidence \(top.value)")
+                }
+
+                var retString = ""
+                // Print all predictions
+                for (label, confidence) in sortedPredictions {
+                    retString += "Class: \(label), Confidence: \(confidence)"
+                }
+                return retString
+
+            } else {
+                return "invalid"
+            }
+        } catch {
+            return "issue parsin"
+            print("Error parsing JSON: \(error)")
+        }
+
+    }
 }

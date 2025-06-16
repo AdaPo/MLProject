@@ -188,6 +188,30 @@ struct IncomeClassificationView: View {
             print(result)
         }
     }
+    
+    func test() {
+        let featureColumns = MetadataLoader.loadFeatureColumns()
+        let scalerParams = MetadataLoader.loadScalerParams()
+
+        let input: [String: Any] = [
+            "age": Double(self.age),
+
+            "education": self.selectedEductaion,
+            "hours-per-week": self.hoursWeekly,
+            "workclass": self.selectedWorkClass,
+            "marital-status": self.selectedMaritalStatus,
+            "occupation": self.selectedOccupation,
+            "relationship":self.selectedRelationship,
+            "race": self.selectedRace,
+            "sex":  self.selectedSex,
+            "native-country": self.selectedCountry
+        ]
+        
+
+        //le/*t inputVector = encodeInput(sampleInput, featureColumns: featureColumns, scalerParams: scalerParams)*/
+        // Pass inputVector to TFLite model
+
+    }
 }
 
 struct IncomeClassificationView_Previews: PreviewProvider {

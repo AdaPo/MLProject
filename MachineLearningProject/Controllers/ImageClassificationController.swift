@@ -21,6 +21,7 @@ class ImageClassificationController: UIViewController, UIImagePickerControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Config.shared.dataset = .pet
         createRootView()
     }
     
@@ -64,23 +65,31 @@ class ImageClassificationController: UIViewController, UIImagePickerControllerDe
     func classifyImage(image: UIImage) {
         //       createSource(image: image)
         self.model.showProgress = true
-        if model.source == .coreMl {
+        switch model.source {
+        case .coreMl:
             do {
                 try self.imagePredictor.makePredictions(for: image, completionHandler: imagePredictionHandler(_:))
             } catch {
                 print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
             }
             self.model.showProgress = false
-
-        } else {
+        case .bigMl:
             print("BigML")
             let resourceId = createSource(image: image)
             print("Resource id is: ",resourceId)
             let result = BigMLConnector().makePredictionForResource(resourceId: resourceId)
             print(result)
-            self.model.showProgress = false
+        case .tensor:
+            let predictor = TensorBridge()
+            do {
+                let result = try predictor.makePredictionPet(image: image)
+                print("Result from Tensor: \(result.label) conf \(result.confidence)")
+                model.result = "\(result.label) with \(result.confidence * 100)% confidence"
+            } catch {
+                print("Tensor unable to make prediction: \(error)")
+            }
         }
-        
+        self.model.showProgress = false
     }
     
     func createSource(image: UIImage) -> String {

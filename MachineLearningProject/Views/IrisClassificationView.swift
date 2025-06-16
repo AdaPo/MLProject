@@ -93,7 +93,8 @@ struct IrisClassificationView: View {
     }
     
     func classifyIris() {
-        if modelSource == .coreMl {
+        switch modelSource {
+        case .coreMl:
             print("coreML")
             do {
                 let config = MLModelConfiguration()
@@ -111,10 +112,19 @@ struct IrisClassificationView: View {
             } catch {
                 print("Error happened.")
             }
-        } else if modelSource == .bigMl {
+        case .bigMl:
             print("bigML")
             BigMLConnector().makePredictionIris(sepalL: sepalL, sepalW: sepalW, petalL: petalL, petalW: petalW) { result in
                 self.result = result
+            }
+        case .tensor:
+            let predictor = TensorBridge()
+            do {
+                let result = try predictor.makePredictionIris(values: [Float32(sepalL), Float32(sepalW), Float32(petalL), Float32(petalW)])
+                print("Result from Tensor: \(result.label) conf \(result.confidence)")
+                self.result = "\(result.label) with \(result.confidence * 100)% confidence"
+            } catch {
+                print("Tensor unable to make prediction: \(error)")
             }
         }
     }

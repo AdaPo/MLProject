@@ -15,7 +15,7 @@ class ImagePredictor {
     static func createImageClassifier() -> VNCoreMLModel {
         let defaultConfig = MLModelConfiguration()
         
-        let classifier = try? SportsClassification(configuration: defaultConfig)
+        let classifier = try? AnimalClassifier(configuration: defaultConfig)
         
         guard let classifier = classifier else {
             fatalError("App failed to create an image classifier model instance.")
