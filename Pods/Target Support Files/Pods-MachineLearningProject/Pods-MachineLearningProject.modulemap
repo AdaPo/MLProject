@@ -1,0 +1,6 @@
+framework module Pods_MachineLearningProject {
+  umbrella header "Pods-MachineLearningProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

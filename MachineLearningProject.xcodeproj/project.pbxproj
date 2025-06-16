@@ -11,7 +11,6 @@
 		4D460A4629E43E0C00874DBF /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A4529E43E0C00874DBF /* BottomBarView.swift */; };
 		4D460A4A29E442D800874DBF /* ImageClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A4929E442D800874DBF /* ImageClassificationView.swift */; };
 		4D460A4F29E4448B00874DBF /* ImageClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A4E29E4448B00874DBF /* ImageClassificationViewModel.swift */; };
-		4D460A5429E445FB00874DBF /* SportsClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5329E445ED00874DBF /* SportsClassification.mlmodel */; };
 		4D460A5729E4463300874DBF /* ImageClassificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5629E4463300874DBF /* ImageClassificationController.swift */; };
 		4D460A5B29E44AEA00874DBF /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5A29E44AEA00874DBF /* ImagePredictor.swift */; };
 		4D460A5D29E4648F00874DBF /* IrisClassification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */; };
@@ -32,14 +31,26 @@
 		4D8919312A096B630002858B /* BigMLConnector+IncomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */; };
 		4D8919332A0BECD70002858B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919322A0BECD70002858B /* Camera.swift */; };
 		4D8919352A0BED8B0002858B /* ImageClassificationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8919342A0BED8B0002858B /* ImageClassificationController+Ext.swift */; };
+		4DC6F85A2DFF1994002B88F5 /* TensorBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F8592DFF1994002B88F5 /* TensorBridge.swift */; };
+		4DC6F85C2DFF19F1002B88F5 /* animalClassifierTFLite.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F85B2DFF19F1002B88F5 /* animalClassifierTFLite.tflite */; };
+		4DC6F85E2DFF1BC5002B88F5 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F85D2DFF1BC5002B88F5 /* ImageUtils.swift */; };
+		4DC6F8602DFF22F2002B88F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F85F2DFF22F2002B88F5 /* Config.swift */; };
+		4DC6F8622DFF273F002B88F5 /* irisClassifierTFLite.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8612DFF273F002B88F5 /* irisClassifierTFLite.tflite */; };
+		4DC6F8652DFF41F7002B88F5 /* feature_columns.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8642DFF41F7002B88F5 /* feature_columns.json */; };
+		4DC6F8672DFF41FD002B88F5 /* scaler_params.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8662DFF41FD002B88F5 /* scaler_params.json */; };
+		4DC6F8692DFF4221002B88F5 /* MetadataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F8682DFF4221002B88F5 /* MetadataLoader.swift */; };
+		4DC6F86C2DFF4272002B88F5 /* Encoder.swift in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F86B2DFF4272002B88F5 /* Encoder.swift */; };
+		4DDB073C2DFED5B900E21796 /* AnimalClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB073B2DFED5B900E21796 /* AnimalClassifier.mlmodel */; };
+		F30B6FC840F4DBE643642119 /* Pods_MachineLearningProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C785A5C40344ECE5DBF588A1 /* Pods_MachineLearningProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D302D62585034AD16581E27 /* Pods-MachineLearningProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearningProject.release.xcconfig"; path = "Target Support Files/Pods-MachineLearningProject/Pods-MachineLearningProject.release.xcconfig"; sourceTree = "<group>"; };
+		2D2C1BB5E0D93F10BC8DA871 /* Pods-MachineLearningProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MachineLearningProject.debug.xcconfig"; path = "Target Support Files/Pods-MachineLearningProject/Pods-MachineLearningProject.debug.xcconfig"; sourceTree = "<group>"; };
 		4D45DA6E29E5BC82009D921B /* BigMLConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigMLConnector.swift; sourceTree = "<group>"; };
 		4D460A4529E43E0C00874DBF /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
 		4D460A4929E442D800874DBF /* ImageClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationView.swift; sourceTree = "<group>"; };
 		4D460A4E29E4448B00874DBF /* ImageClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationViewModel.swift; sourceTree = "<group>"; };
-		4D460A5329E445ED00874DBF /* SportsClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SportsClassification.mlmodel; sourceTree = "<group>"; };
 		4D460A5629E4463300874DBF /* ImageClassificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationController.swift; sourceTree = "<group>"; };
 		4D460A5A29E44AEA00874DBF /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = IrisClassification.mlmodel; path = "../../../../Desktop/Škola/Magistr/Diplomka/ExporteModels/IrisClassification.mlmodel"; sourceTree = "<group>"; };
@@ -62,6 +73,17 @@
 		4D8919302A096B630002858B /* BigMLConnector+IncomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigMLConnector+IncomeExtension.swift"; sourceTree = "<group>"; };
 		4D8919322A0BECD70002858B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		4D8919342A0BED8B0002858B /* ImageClassificationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageClassificationController+Ext.swift"; sourceTree = "<group>"; };
+		4DC6F8592DFF1994002B88F5 /* TensorBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBridge.swift; sourceTree = "<group>"; };
+		4DC6F85B2DFF19F1002B88F5 /* animalClassifierTFLite.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = animalClassifierTFLite.tflite; sourceTree = "<group>"; };
+		4DC6F85D2DFF1BC5002B88F5 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		4DC6F85F2DFF22F2002B88F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4DC6F8612DFF273F002B88F5 /* irisClassifierTFLite.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = irisClassifierTFLite.tflite; sourceTree = "<group>"; };
+		4DC6F8642DFF41F7002B88F5 /* feature_columns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feature_columns.json; sourceTree = "<group>"; };
+		4DC6F8662DFF41FD002B88F5 /* scaler_params.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaler_params.json; sourceTree = "<group>"; };
+		4DC6F8682DFF4221002B88F5 /* MetadataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataLoader.swift; sourceTree = "<group>"; };
+		4DC6F86B2DFF4272002B88F5 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
+		4DDB073B2DFED5B900E21796 /* AnimalClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimalClassifier.mlmodel; sourceTree = "<group>"; };
+		C785A5C40344ECE5DBF588A1 /* Pods_MachineLearningProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineLearningProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +91,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30B6FC840F4DBE643642119 /* Pods_MachineLearningProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D22B4B4BCA713E32FFC7B08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D2C1BB5E0D93F10BC8DA871 /* Pods-MachineLearningProject.debug.xcconfig */,
+				0D302D62585034AD16581E27 /* Pods-MachineLearningProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4D45DA6D29E5BC6F009D921B /* Connectors */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +150,9 @@
 			children = (
 				4D89192A2A027F300002858B /* IncomeClassificationModel.mlmodel */,
 				4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */,
-				4D460A5329E445ED00874DBF /* SportsClassification.mlmodel */,
+				4DDB073B2DFED5B900E21796 /* AnimalClassifier.mlmodel */,
+				4DC6F85B2DFF19F1002B88F5 /* animalClassifierTFLite.tflite */,
+				4DC6F8612DFF273F002B88F5 /* irisClassifierTFLite.tflite */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -156,6 +190,8 @@
 			children = (
 				4D46424429CDCDFA00917FAC /* MachineLearningProject */,
 				4D46424329CDCDFA00917FAC /* Products */,
+				0D22B4B4BCA713E32FFC7B08 /* Pods */,
+				9C7698A27684B915CBEDA270 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +206,8 @@
 		4D46424429CDCDFA00917FAC /* MachineLearningProject */ = {
 			isa = PBXGroup;
 			children = (
+				4DC6F8632DFF41E8002B88F5 /* Resources */,
+				4DC6F86A2DFF4227002B88F5 /* Utils */,
 				4D45DA6D29E5BC6F009D921B /* Connectors */,
 				4D460A5829E44AD000874DBF /* Predictors */,
 				4D460A5529E4461900874DBF /* Controllers */,
@@ -184,8 +222,37 @@
 				4D46425329CDCDFB00917FAC /* Info.plist */,
 				4D460A5229E445E800874DBF /* MLModels */,
 				4D460A4729E43E1200874DBF /* Components */,
+				4DC6F8592DFF1994002B88F5 /* TensorBridge.swift */,
+				4DC6F85F2DFF22F2002B88F5 /* Config.swift */,
 			);
 			path = MachineLearningProject;
+			sourceTree = "<group>";
+		};
+		4DC6F8632DFF41E8002B88F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6F8642DFF41F7002B88F5 /* feature_columns.json */,
+				4DC6F8662DFF41FD002B88F5 /* scaler_params.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4DC6F86A2DFF4227002B88F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4DC6F86B2DFF4272002B88F5 /* Encoder.swift */,
+				4DC6F85D2DFF1BC5002B88F5 /* ImageUtils.swift */,
+				4DC6F8682DFF4221002B88F5 /* MetadataLoader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9C7698A27684B915CBEDA270 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C785A5C40344ECE5DBF588A1 /* Pods_MachineLearningProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D46425629CDCDFB00917FAC /* Build configuration list for PBXNativeTarget "MachineLearningProject" */;
 			buildPhases = (
+				2C8345F0865E7F2C37722BFB /* [CP] Check Pods Manifest.lock */,
 				4D46423E29CDCDFA00917FAC /* Sources */,
 				4D46423F29CDCDFA00917FAC /* Frameworks */,
 				4D46424029CDCDFA00917FAC /* Resources */,
+				4F7043D59E07B9A5F0312B3E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,13 +315,64 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC6F8622DFF273F002B88F5 /* irisClassifierTFLite.tflite in Resources */,
+				4DC6F8672DFF41FD002B88F5 /* scaler_params.json in Resources */,
 				4D46425229CDCDFB00917FAC /* LaunchScreen.storyboard in Resources */,
 				4D46424F29CDCDFB00917FAC /* Assets.xcassets in Resources */,
+				4DC6F85C2DFF19F1002B88F5 /* animalClassifierTFLite.tflite in Resources */,
+				4DC6F8652DFF41F7002B88F5 /* feature_columns.json in Resources */,
+				4DC6F86C2DFF4272002B88F5 /* Encoder.swift in Resources */,
 				4D46424D29CDCDFA00917FAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C8345F0865E7F2C37722BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MachineLearningProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F7043D59E07B9A5F0312B3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MachineLearningProject/Pods-MachineLearningProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MachineLearningProject/Pods-MachineLearningProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MachineLearningProject/Pods-MachineLearningProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D46423E29CDCDFA00917FAC /* Sources */ = {
@@ -271,16 +391,20 @@
 				4D89192F2A09698D0002858B /* BigMLConnector+ImageExtension.swift in Sources */,
 				4D460A6129E59D7400874DBF /* IrisViewModel.swift in Sources */,
 				4D8919352A0BED8B0002858B /* ImageClassificationController+Ext.swift in Sources */,
+				4DC6F8602DFF22F2002B88F5 /* Config.swift in Sources */,
+				4DC6F8692DFF4221002B88F5 /* MetadataLoader.swift in Sources */,
+				4DDB073C2DFED5B900E21796 /* AnimalClassifier.mlmodel in Sources */,
 				4D460A4629E43E0C00874DBF /* BottomBarView.swift in Sources */,
 				4D460A6529E5AF8400874DBF /* IrisClassificationController.swift in Sources */,
 				4D460A4F29E4448B00874DBF /* ImageClassificationViewModel.swift in Sources */,
 				4D460A5B29E44AEA00874DBF /* ImagePredictor.swift in Sources */,
 				4D8919272A0273030002858B /* IncomeClassificationController.swift in Sources */,
+				4DC6F85A2DFF1994002B88F5 /* TensorBridge.swift in Sources */,
 				4D8919292A02731B0002858B /* IncomeClassificationView.swift in Sources */,
-				4D460A5429E445FB00874DBF /* SportsClassification.mlmodel in Sources */,
 				4D460A5729E4463300874DBF /* ImageClassificationController.swift in Sources */,
 				4D460A4A29E442D800874DBF /* ImageClassificationView.swift in Sources */,
 				4D45DA6F29E5BC82009D921B /* BigMLConnector.swift in Sources */,
+				4DC6F85E2DFF1BC5002B88F5 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +546,7 @@
 		};
 		4D46425729CDCDFB00917FAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2C1BB5E0D93F10BC8DA871 /* Pods-MachineLearningProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +576,7 @@
 		};
 		4D46425829CDCDFB00917FAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D302D62585034AD16581E27 /* Pods-MachineLearningProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

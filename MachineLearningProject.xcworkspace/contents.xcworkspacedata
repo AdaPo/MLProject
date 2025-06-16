@@ -4,4 +4,10 @@
    <FileRef
       location = "container:MachineLearningProject.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:MachineLearningProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
