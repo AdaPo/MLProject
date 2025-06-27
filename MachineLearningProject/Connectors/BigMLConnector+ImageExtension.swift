@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 extension BigMLConnector {
     
-     func uploadResource(imageName: String, image: UIImage) -> String {
-         var semaphore = DispatchSemaphore (value: 0)
-
+     func uploadResource(imageName: String, image: UIImage) async throws -> String {
          // Set your private information
          let USER = "poua02"
          let API_KEY = "3e91272ebb8dd9e23a3108c4a223bf9ae3c5cce2"
@@ -57,22 +55,12 @@ extension BigMLConnector {
          var retStr = ""
          // Create the URL session and task for the request
          let session = URLSession.shared
-         let task = session.dataTask(with: request) { (data, response, error) in
-             // Handle the response
-             guard let data = data, let response = response as? HTTPURLResponse else {
-                 print("Error: \(error?.localizedDescription ?? "Unknown error")")
-                 semaphore.signal()
-                 return
-             }
-
-             print("Status code: \(response.statusCode)")
-             print("Response body: \(String(data: data, encoding: .utf8) ?? "")")
-             retStr = try! JSONDecoder().decode(BigMLUploadImageModel.self, from: data).resource
-             semaphore.signal()
-         }
+         let (data, response) = try await session.data(for: request)
          
-         task.resume()
-         semaphore.wait()
+         print("Response: \(response)")
+         print("Response body: \(String(data: data, encoding: .utf8) ?? "")")
+         retStr = try! JSONDecoder().decode(BigMLUploadImageModel.self, from: data).resource
+        
          return retStr
      }
      
@@ -92,7 +80,6 @@ extension BigMLConnector {
          
          var responseString = ""
          
-//         let response = await URLSession.shared.data(for: re)
          let task = URLSession.shared.dataTask(with: request) { data, _, error in
              guard let data = data, error == nil else {
                  print("No data")
@@ -102,16 +89,44 @@ extension BigMLConnector {
              do {
                  let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
                  //                responseString = response as! String
-                 let parsedResponse = self.parseResponse(response: response)
-                 print(parsedResponse)
+                 responseString = self.parseResponse(response: response)
+                 print(responseString)
              } catch {
                  print("no response")
-             }
+    }
          }
          task.resume()
          return responseString
      }
-     
+    
+    func makePredictionForResource(resourceId: String) async throws  -> String {
+        guard let url = URL(string: URL_STRING+BIGML_AUTH) else { return "" }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = ["Content-Type": "application/json"]
+        
+        let body: [String: AnyHashable] = [
+            "deepnet": "deepnet/684efee38baab6a917b8dfd2",
+            "input_data": [
+                "000000": resourceId
+            ]
+        ]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+        
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        var responseString: String
+        do {
+            let response = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
+            //                responseString = response as! String
+            responseString = self.parseResponse(response: response)
+        } catch {
+            return "no response"
+        }
+        
+        return responseString
+    }
+
     func parseResponse(response root: [String: Any]) -> String {
 
         // Assume this is the JSON you get from the backend
@@ -141,7 +156,7 @@ extension BigMLConnector {
                 var retString = ""
                 // Print all predictions
                 for (label, confidence) in sortedPredictions {
-                    retString += "Class: \(label), Confidence: \(confidence)"
+                    retString += "Class: \(label), Confidence: \(confidence)\n"
                 }
                 return retString
 

@@ -97,6 +97,7 @@ struct IrisClassificationView: View {
         case .coreMl:
             print("coreML")
             do {
+                
                 let config = MLModelConfiguration()
                 let model = try IrisClassification(configuration: config)
 

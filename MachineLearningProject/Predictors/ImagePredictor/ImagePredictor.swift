@@ -43,9 +43,8 @@ class ImagePredictor {
     /// A dictionary of prediction handler functions, each keyed by its Vision request.
     private var predictionHandlers = [VNRequest: ImagePredictionHandler]()
 
-    /// Generates a new request instance that uses the Image Predictor's image classifier model.
     private func createImageClassificationRequest() -> VNImageBasedRequest {
-        // Create an image classification request with an image classifier model.
+        // Vytvoření requestu pro obrazovou klasfikaci
 
         let imageClassificationRequest = VNCoreMLRequest(model: ImagePredictor.imageClassifier,
                                                          completionHandler: visionRequestHandler)
@@ -54,9 +53,6 @@ class ImagePredictor {
         return imageClassificationRequest
     }
 
-    /// Generates an image classification prediction for a photo.
-    /// - Parameter photo: An image, typically of an object or a scene.
-    /// - Tag: makePredictions
     func makePredictions(for photo: UIImage, completionHandler: @escaping ImagePredictionHandler) throws {
         let orientation = CGImagePropertyOrientation(photo.imageOrientation)
 
@@ -67,11 +63,9 @@ class ImagePredictor {
         let imageClassificationRequest = createImageClassificationRequest()
         predictionHandlers[imageClassificationRequest] = completionHandler
         
-//        imageClassificationRequest.usesCPUOnly = true
         let handler = VNImageRequestHandler(cgImage: photoImage, orientation: orientation)
         let requests: [VNRequest] = [imageClassificationRequest]
 
-        // Start the image classification request.
         try handler.perform(requests)
     }
 

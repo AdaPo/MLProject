@@ -14,7 +14,7 @@ class TensorBridge {
     let interpreter: Interpreter
     let labelsPets = ["cat", "dog", "snake"]
     let labelsIris = ["0", "1", "2"] // setosa -> 0, versicolor -> 1, virginica -> 2)
-    
+    let labelAdult = ["0", "1"]
     var inferences: [Inference] = []
 
      init () {
@@ -25,15 +25,13 @@ class TensorBridge {
              case .pet:
                  return "animalClassifierTFLite"
              case .adult:
-                 return "adultClassifierTFLite"
+                 return "adult_income_model"
              }
          }
          
          guard let modelPath = Bundle.main.path(forResource: modelToBeLoaded, ofType: "tflite") else {
              fatalError("Couldn't find animalClassifierTFLite")
          }
-//         var options = Interpreter.Options()
-//         options.threadCount =
          
          do {
              self.interpreter = try Interpreter(modelPath: modelPath)
@@ -100,6 +98,28 @@ class TensorBridge {
             .sorted { $0.1 > $1.1}
             .map { (label: labelsIris[$0.0], confidence: $0.1) }
         
+        return inferences.first ?? Inference(label: "missing", confidence: 0)
+    }
+    
+    func makePredictionAdult(data: Data) throws -> Inference {
+        do {
+            try self.interpreter.allocateTensors()
+            try interpreter.copy(data, toInputAt: 0)
+            try interpreter.invoke()
+        } catch {
+            print("Failed: \(error)")
+            fatalError("Failuer")
+        }
+        
+        let output = try self.interpreter.output(at: 0)
+        let results: [Float] = output.data.withUnsafeBytes {
+            Array($0.bindMemory(to: Float.self))
+        }
+        
+        self.inferences = zip(labelAdult.indices, results)
+            .sorted { $0.1 > $1.1}
+            .map { (label: labelAdult[$0.0], confidence: $0.1) }
+
         return inferences.first ?? Inference(label: "missing", confidence: 0)
     }
 }

@@ -155,62 +155,71 @@ struct IncomeClassificationView: View {
     }
     
     func classifyIncome() {
-        if modelSource == .coreMl {
-            print("coreML")
+        switch modelSource {
+        case .coreMl:
             do {
                 let config = MLModelConfiguration()
-                let model = try IncomeClassificationModel(configuration: config)
+                let model = try IncomeClassificationModelTest(configuration: config)
                 let prediction = try model.prediction(
-                    age: Double(self.age),
+                    age: Int64(self.age),
                     workclass: self.selectedWorkClass,
                     education: self.selectedEductaion,
-                    maritalStatus: self.selectedMaritalStatus,
+                    marital_status: self.selectedMaritalStatus,
                     occupation: self.selectedOccupation,
                     relationship: self.selectedRelationship,
                     race: self.selectedRace,
-                    sex: self.selectedSex,
-                    capitalGain: self.capitalGain,
-                    capitalLoss: self.capitalLoss,
-                    hoursPerWeek: self.hoursWeekly,
-                    country: self.selectedCountry
+                    gender: self.selectedSex,
+                    capital_gain: Int64(self.capitalGain),
+                    capital_loss: Int64(self.capitalLoss),
+                    hours_per_week: Int64(self.hoursWeekly),
+                    native_country: self.selectedCountry
                 )
                 let result = prediction.target
-                self.result = result
-                print(result)
+                self.result = "\(Int(result.rounded())) \n \(prediction)"
+                print("\(result) \n \(prediction.featureNames) \(prediction.target)")
             } catch {
                 print("Error happened.")
             }
-        } else if modelSource == .bigMl {
+        case .bigMl:
             BigMLConnector().makePredictionIncome(incomeModel: IncomeModel(
                 age: self.age, workClass: self.selectedWorkClass, education: self.selectedEductaion, maritalStatus: self.selectedMaritalStatus, occupation: self.selectedOccupation, relationship: selectedRelationship, race: selectedRace, sex: selectedSex, capitalGain: Int(capitalGain), capitalLoss: Int(capitalLoss), hoursPerWeek: Int(hoursWeekly))) { result in
                     self.result = result
                 }
             print(result)
+        case .tensor:
+            let featureColumns = MetadataLoader.loadFeatureColumns()
+            let scalerParams = MetadataLoader.loadScalerParams()
+            let input: [String: Any] = [
+                "age": Double(self.age),
+                "education": self.selectedEductaion,
+                "hours-per-week": self.hoursWeekly,
+                "workclass": self.selectedWorkClass,
+                "marital-status": self.selectedMaritalStatus,
+                "occupation": self.selectedOccupation,
+                "relationship":self.selectedRelationship,
+                "race": self.selectedRace,
+                "sex":  self.selectedSex,
+                "native-country": self.selectedCountry
+            ]
+            
+            let encodedInput = MetadataLoader.encodeInput(input, featureColumns: featureColumns, scalerParams: scalerParams)
+
+            // Pass inputVector to TFLite model
+            let inputBuffer = encodedInput.withUnsafeBufferPointer { Data(buffer: $0) }
+
+            
+            Config.shared.dataset = .adult
+            let predictor = TensorBridge()
+            
+            do {
+                let result = try predictor.makePredictionAdult(data: inputBuffer)
+                print(result)
+            } catch {
+                print(error)
+            }
+            
         }
-    }
-    
-    func test() {
-        let featureColumns = MetadataLoader.loadFeatureColumns()
-        let scalerParams = MetadataLoader.loadScalerParams()
-
-        let input: [String: Any] = [
-            "age": Double(self.age),
-
-            "education": self.selectedEductaion,
-            "hours-per-week": self.hoursWeekly,
-            "workclass": self.selectedWorkClass,
-            "marital-status": self.selectedMaritalStatus,
-            "occupation": self.selectedOccupation,
-            "relationship":self.selectedRelationship,
-            "race": self.selectedRace,
-            "sex":  self.selectedSex,
-            "native-country": self.selectedCountry
-        ]
-        
-
-        //le/*t inputVector = encodeInput(sampleInput, featureColumns: featureColumns, scalerParams: scalerParams)*/
-        // Pass inputVector to TFLite model
-
+  
     }
 }
 

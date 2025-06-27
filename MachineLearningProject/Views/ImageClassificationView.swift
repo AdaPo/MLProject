@@ -75,7 +75,7 @@ struct ImageClassificationView: View {
                         
                     }
                     Text("Classified as: \n \(model.result)")
-                        .foregroundColor(.black)
+//                        .foregroundColor(./*black*/)
 
                 }
                 Spacer()

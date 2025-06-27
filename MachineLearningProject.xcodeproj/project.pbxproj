@@ -36,11 +36,12 @@
 		4DC6F85E2DFF1BC5002B88F5 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F85D2DFF1BC5002B88F5 /* ImageUtils.swift */; };
 		4DC6F8602DFF22F2002B88F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F85F2DFF22F2002B88F5 /* Config.swift */; };
 		4DC6F8622DFF273F002B88F5 /* irisClassifierTFLite.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8612DFF273F002B88F5 /* irisClassifierTFLite.tflite */; };
-		4DC6F8652DFF41F7002B88F5 /* feature_columns.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8642DFF41F7002B88F5 /* feature_columns.json */; };
-		4DC6F8672DFF41FD002B88F5 /* scaler_params.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8662DFF41FD002B88F5 /* scaler_params.json */; };
 		4DC6F8692DFF4221002B88F5 /* MetadataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F8682DFF4221002B88F5 /* MetadataLoader.swift */; };
-		4DC6F86C2DFF4272002B88F5 /* Encoder.swift in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F86B2DFF4272002B88F5 /* Encoder.swift */; };
-		4DDB073C2DFED5B900E21796 /* AnimalClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB073B2DFED5B900E21796 /* AnimalClassifier.mlmodel */; };
+		4DC6F86E2E008AE7002B88F5 /* AnimalClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F86D2E008AE7002B88F5 /* AnimalClassifier.mlpackage */; };
+		4DC6F8722E01F360002B88F5 /* IncomeClassificationModelTest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4DC6F8712E01F360002B88F5 /* IncomeClassificationModelTest.mlmodel */; };
+		4DC6F8762E088E6C002B88F5 /* adult_income_model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8752E088E6C002B88F5 /* adult_income_model.tflite */; };
+		4DC6F87A2E08902D002B88F5 /* feature_columns.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F8792E08902D002B88F5 /* feature_columns.json */; };
+		4DC6F87C2E08904D002B88F5 /* scaler_params.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F87B2E08904D002B88F5 /* scaler_params.json */; };
 		F30B6FC840F4DBE643642119 /* Pods_MachineLearningProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C785A5C40344ECE5DBF588A1 /* Pods_MachineLearningProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,11 +79,12 @@
 		4DC6F85D2DFF1BC5002B88F5 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		4DC6F85F2DFF22F2002B88F5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4DC6F8612DFF273F002B88F5 /* irisClassifierTFLite.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = irisClassifierTFLite.tflite; sourceTree = "<group>"; };
-		4DC6F8642DFF41F7002B88F5 /* feature_columns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feature_columns.json; sourceTree = "<group>"; };
-		4DC6F8662DFF41FD002B88F5 /* scaler_params.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaler_params.json; sourceTree = "<group>"; };
 		4DC6F8682DFF4221002B88F5 /* MetadataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataLoader.swift; sourceTree = "<group>"; };
-		4DC6F86B2DFF4272002B88F5 /* Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoder.swift; sourceTree = "<group>"; };
-		4DDB073B2DFED5B900E21796 /* AnimalClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimalClassifier.mlmodel; sourceTree = "<group>"; };
+		4DC6F86D2E008AE7002B88F5 /* AnimalClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = AnimalClassifier.mlpackage; sourceTree = "<group>"; };
+		4DC6F8712E01F360002B88F5 /* IncomeClassificationModelTest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IncomeClassificationModelTest.mlmodel; sourceTree = "<group>"; };
+		4DC6F8752E088E6C002B88F5 /* adult_income_model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = adult_income_model.tflite; sourceTree = "<group>"; };
+		4DC6F8792E08902D002B88F5 /* feature_columns.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = feature_columns.json; sourceTree = "<group>"; };
+		4DC6F87B2E08904D002B88F5 /* scaler_params.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaler_params.json; sourceTree = "<group>"; };
 		C785A5C40344ECE5DBF588A1 /* Pods_MachineLearningProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MachineLearningProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,9 +152,11 @@
 			children = (
 				4D89192A2A027F300002858B /* IncomeClassificationModel.mlmodel */,
 				4D460A5C29E4648F00874DBF /* IrisClassification.mlmodel */,
-				4DDB073B2DFED5B900E21796 /* AnimalClassifier.mlmodel */,
+				4DC6F86D2E008AE7002B88F5 /* AnimalClassifier.mlpackage */,
 				4DC6F85B2DFF19F1002B88F5 /* animalClassifierTFLite.tflite */,
+				4DC6F8712E01F360002B88F5 /* IncomeClassificationModelTest.mlmodel */,
 				4DC6F8612DFF273F002B88F5 /* irisClassifierTFLite.tflite */,
+				4DC6F8752E088E6C002B88F5 /* adult_income_model.tflite */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -231,8 +235,8 @@
 		4DC6F8632DFF41E8002B88F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6F8642DFF41F7002B88F5 /* feature_columns.json */,
-				4DC6F8662DFF41FD002B88F5 /* scaler_params.json */,
+				4DC6F8792E08902D002B88F5 /* feature_columns.json */,
+				4DC6F87B2E08904D002B88F5 /* scaler_params.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -240,7 +244,6 @@
 		4DC6F86A2DFF4227002B88F5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				4DC6F86B2DFF4272002B88F5 /* Encoder.swift */,
 				4DC6F85D2DFF1BC5002B88F5 /* ImageUtils.swift */,
 				4DC6F8682DFF4221002B88F5 /* MetadataLoader.swift */,
 			);
@@ -315,13 +318,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC6F87A2E08902D002B88F5 /* feature_columns.json in Resources */,
 				4DC6F8622DFF273F002B88F5 /* irisClassifierTFLite.tflite in Resources */,
-				4DC6F8672DFF41FD002B88F5 /* scaler_params.json in Resources */,
 				4D46425229CDCDFB00917FAC /* LaunchScreen.storyboard in Resources */,
+				4DC6F8762E088E6C002B88F5 /* adult_income_model.tflite in Resources */,
+				4DC6F87C2E08904D002B88F5 /* scaler_params.json in Resources */,
 				4D46424F29CDCDFB00917FAC /* Assets.xcassets in Resources */,
 				4DC6F85C2DFF19F1002B88F5 /* animalClassifierTFLite.tflite in Resources */,
-				4DC6F8652DFF41F7002B88F5 /* feature_columns.json in Resources */,
-				4DC6F86C2DFF4272002B88F5 /* Encoder.swift in Resources */,
 				4D46424D29CDCDFA00917FAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,12 +383,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D460A5F29E59D5700874DBF /* IrisClassificationView.swift in Sources */,
+				4DC6F8722E01F360002B88F5 /* IncomeClassificationModelTest.mlmodel in Sources */,
 				4D89192B2A027F300002858B /* IncomeClassificationModel.mlmodel in Sources */,
 				4D89192D2A0967430002858B /* BigMLConnectr+IrisExtension.swift in Sources */,
 				4D46424A29CDCDFA00917FAC /* ViewController.swift in Sources */,
 				4D8919312A096B630002858B /* BigMLConnector+IncomeExtension.swift in Sources */,
 				4D8919332A0BECD70002858B /* Camera.swift in Sources */,
 				4D46424629CDCDFA00917FAC /* AppDelegate.swift in Sources */,
+				4DC6F86E2E008AE7002B88F5 /* AnimalClassifier.mlpackage in Sources */,
 				4D46424829CDCDFA00917FAC /* SceneDelegate.swift in Sources */,
 				4D460A5D29E4648F00874DBF /* IrisClassification.mlmodel in Sources */,
 				4D89192F2A09698D0002858B /* BigMLConnector+ImageExtension.swift in Sources */,
@@ -393,7 +398,6 @@
 				4D8919352A0BED8B0002858B /* ImageClassificationController+Ext.swift in Sources */,
 				4DC6F8602DFF22F2002B88F5 /* Config.swift in Sources */,
 				4DC6F8692DFF4221002B88F5 /* MetadataLoader.swift in Sources */,
-				4DDB073C2DFED5B900E21796 /* AnimalClassifier.mlmodel in Sources */,
 				4D460A4629E43E0C00874DBF /* BottomBarView.swift in Sources */,
 				4D460A6529E5AF8400874DBF /* IrisClassificationController.swift in Sources */,
 				4D460A4F29E4448B00874DBF /* ImageClassificationViewModel.swift in Sources */,
@@ -561,6 +565,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,6 +596,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

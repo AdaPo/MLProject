@@ -74,11 +74,18 @@ class ImageClassificationController: UIViewController, UIImagePickerControllerDe
             }
             self.model.showProgress = false
         case .bigMl:
-            print("BigML")
-            let resourceId = createSource(image: image)
-            print("Resource id is: ",resourceId)
-            let result = BigMLConnector().makePredictionForResource(resourceId: resourceId)
-            print(result)
+            Task {
+                self.model.showProgress = true
+                
+                print("BigML")
+                guard let resourceId = try? await createSource(image: image) else {
+                    return
+                }
+                print("Resource id is: ",resourceId)
+                let result = try? await BigMLConnector().makePredictionForResource(resourceId: resourceId)
+                model.result = "\(result ?? "No result")"
+                self.model.showProgress = false
+            }
         case .tensor:
             let predictor = TensorBridge()
             do {
@@ -92,14 +99,8 @@ class ImageClassificationController: UIViewController, UIImagePickerControllerDe
         self.model.showProgress = false
     }
     
-    func createSource(image: UIImage) -> String {
-        guard let imageName = image.accessibilityIdentifier else { return ""}
-        guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(imageName) else {
-            return ""
-        }
-        let urlString = imageURL.absoluteString
-        
-        return BigMLConnector().uploadResource(imageName: imageName, image: image)
+    func createSource(image: UIImage) async throws -> String {
+        return try await BigMLConnector().uploadResource(imageName: "classificationImage", image: image)
     }
     
     /// The method the Image Predictor calls when its image classifier model generates a prediction.
